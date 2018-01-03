@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -15,7 +14,7 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.firebase.auth.FirebaseAuth;
 
-import askapp.kikerojash.com.askapp.MainActivity;
+import askapp.kikerojash.com.askapp.main.MainActivity;
 import askapp.kikerojash.com.askapp.R;
 import askapp.kikerojash.com.askapp.login.pageadapter.PageAdapter;
 import butterknife.BindView;
@@ -27,11 +26,11 @@ import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.viewPager)ViewPager viewPager;
-
+    @BindView(R.id.btnFaceb)LoginButton loginButtonFacebook;
     private int [] layouts = {R.layout.first_slide,R.layout.second_slide};
     private PageAdapter pageAdapter;
 
-    private LoginButton loginButtonFacebook;
+   // private LoginButton loginButtonFacebook;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private CallbackManager callbackManager;
@@ -72,6 +71,12 @@ public class LoginActivity extends AppCompatActivity {
                 Intent.FLAG_ACTIVITY_CLEAR_TASK |
                 Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
 

@@ -1,18 +1,14 @@
-package askapp.kikerojash.com.askapp;
+package askapp.kikerojash.com.askapp.main;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.drawable.DrawerArrowDrawable;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -23,6 +19,7 @@ import com.facebook.login.LoginManager;
 import com.github.mzule.fantasyslide.SideBar;
 import com.github.mzule.fantasyslide.SimpleFantasyListener;
 
+import askapp.kikerojash.com.askapp.R;
 import askapp.kikerojash.com.askapp.login.LoginActivity;
 import butterknife.BindView;
 import butterknife.ButterKnife;

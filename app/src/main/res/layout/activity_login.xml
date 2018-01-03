@@ -63,7 +63,6 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:text="Sign in with Facebbok"
                 app:layout_constraintBottom_toTopOf="@+id/textEnd"
                 app:layout_constraintEnd_toEndOf="@+id/textEnd"
                 app:layout_constraintStart_toStartOf="@+id/textEnd" />
